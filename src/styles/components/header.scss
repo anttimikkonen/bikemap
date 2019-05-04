@@ -1,0 +1,11 @@
+@import "../partials/colors.scss";
+
+.header {
+  display: flex;
+  background-color: $black;
+
+  h1 {
+    margin-left: 1em;
+    color: white;
+  }
+}
