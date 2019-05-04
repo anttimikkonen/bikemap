@@ -1,4 +1,15 @@
 @import "components/header.scss";
+@import "components/map.scss";
+
+body {
+  margin: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
 h1 {
   font-size: 36px;
