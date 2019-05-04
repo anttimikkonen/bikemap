@@ -1,8 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './css/main.css';
+import HeaderComponent from './components/HeaderComponent';
 
 const Index = () => {
-    return <div className="hello-world">Hello world!</div>;
+  return (
+    <div>
+      <HeaderComponent />
+    </div>
+  );
 };
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(<Index />, document.getElementById('index'));
