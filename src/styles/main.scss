@@ -1,6 +1,9 @@
 @import "components/header.scss";
 @import "components/map.scss";
 
+// 3rd party imports
+@import "~leaflet/dist/leaflet.css";
+
 body {
   margin: 0;
 }

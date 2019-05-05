@@ -6,19 +6,26 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: "./src/app.jsx",
+  entry: {
+    vendor: ['react', 'leaflet', 'react-dom'],
+    app: "./src/app.jsx",
+  },
   module: {
     rules: [
       {
         test: /\.s?[ac]ss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+        loader: 'file-loader'
       }
     ]
   },
