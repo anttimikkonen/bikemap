@@ -1,11 +1,14 @@
 @import "../partials/colors.scss";
+@import "partials/variables.scss";
 
 .header {
   display: flex;
+  height: 80px;
   background-color: $black;
 
   h1 {
-    margin-left: 1em;
+    margin-left: $desktop-gutter;
     color: white;
+    align-self: center;
   }
 }

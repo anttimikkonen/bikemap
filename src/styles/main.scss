@@ -1,4 +1,18 @@
 @import "components/header.scss";
+@import "components/map.scss";
+
+// 3rd party imports
+@import "~leaflet/dist/leaflet.css";
+
+body {
+  margin: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
 h1 {
   font-size: 36px;
