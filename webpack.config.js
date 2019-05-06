@@ -1,14 +1,23 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CleanWebPackPlugin = require('clean-webpack-plugin');
+const path = require('path');
+
+const removeDist = new CleanWebPackPlugin();
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
-  filename: "./index.html"
+  filename: "index.html",
+  inject: true,
 });
 
 module.exports = {
   entry: {
     vendor: ['react', 'leaflet', 'react-dom'],
     app: "./src/app.jsx",
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -29,5 +38,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [removeDist, htmlPlugin]
 };

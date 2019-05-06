@@ -14,10 +14,6 @@ module.exports = merge(common, {
       sourceMap: true,
       parallel: true,
       exclude: [/\.min\.js$/gi] // skip pre-minified libs
-    }),
-    new webpack.optimize.AggressiveSplittingPlugin({
-      minSize: 20000,
-      maxSize: 30000,
     })
   ]
 });
