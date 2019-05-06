@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --hot --port 3000",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production --config webpack.prod.js"
   },
   "author": "Antti Mikkonen",
   "license": "MIT",
@@ -15,9 +15,11 @@
     "leaflet": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
