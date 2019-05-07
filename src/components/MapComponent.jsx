@@ -12,6 +12,14 @@ export default class MapComponent extends React.PureComponent {
       id: 'mapbox.streets',
       accessToken: 'pk.eyJ1IjoiYW50dGltaWtrb25lbiIsImEiOiJjanZhcXFtejYxMTY2M3lwODRjMXk5b2poIn0.CqcITAA5UIQKmYEwfdOG7A'
     }).addTo(this.map);
+
+    this.addMarker();
+  }
+
+  addMarker() {
+    this.map.on('click', (e) => {
+      const marker = new L.marker(e.latlng).addTo(this.map);
+    });
   }
 
   render() {
